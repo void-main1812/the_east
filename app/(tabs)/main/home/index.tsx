@@ -7,6 +7,7 @@ import { Input } from "../../../../components/Input";
 import { Ionicons } from "expo-vector-icons";
 import productData from "../../../../data/products";
 import { ScrollView } from "react-native-gesture-handler";
+import { DiscountBanner } from "../../../../components/DiscountBanner";
 
 const index = () => {
   return (
@@ -19,9 +20,17 @@ const index = () => {
           </Text>
           <Text style={tw`text-[72px] font-black text-gray-800`}>The East</Text>
         </View>
+        <View style={tw`flex flex-row gap-2 mx-8`}>
+          {/* Search */}
+          <Input placeholder="Search any food item"></Input>
 
-        {/* Search */}
-        <Input placeholder="Search any food item"></Input>
+          {/* Filter */}
+          <Pressable
+            style={tw`p-4 bg-amber-500 rounded-lg shadow-lg shadow-amber-500`}
+          >
+            <Ionicons name="ios-funnel" size={24} color="white" />
+          </Pressable>
+        </View>
 
         {/* Products */}
         <View style={tw`flex flex-row justify-between flex-wrap gap-8 `}>
@@ -29,6 +38,12 @@ const index = () => {
             return (
               <View style={tw`flex flex-col gap-1`}>
                 <Image source={item.image} style={tw`h-48 w-48 rounded-md`} />
+                <Text
+                  style={tw`p-2 bg-amber-500 text-white text-[16px] rounded-md absolute right-2 top-2`}
+                >
+                  <Ionicons name="ios-star" color="white" size={16} />{" "}
+                  {item.rating}
+                </Text>
                 <Text style={tw`text-3xl font-black text-zinc-900`}>
                   {item.name}
                 </Text>
@@ -40,12 +55,12 @@ const index = () => {
           })}
         </View>
 
-        {/* Filter */}
-        <Pressable
-          style={tw`p-4 absolute bottom-[24px] right-[16px] bg-amber-500 rounded-lg shadow-lg shadow-amber-500`}
-        >
-          <Ionicons name="ios-funnel" size={24} color="white" />
-        </Pressable>
+        {/* Discount Banner */}
+        <DiscountBanner
+          image={require("../../../../assets/images/food_items/banner_sushi.png")}
+          discount={20}
+          code="FD20YO"
+        />
       </View>
     </ScrollView>
   );
