@@ -9,8 +9,11 @@ import productData from "../../../../data/products";
 import { ScrollView } from "react-native-gesture-handler";
 import { DiscountBanner } from "../../../../components/DiscountBanner";
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import { useRouter } from "expo-router";
 
 const index = () => {
+
+  const router = useRouter()
 
   return (
     <ScrollView style={tw`bg-white`}>
@@ -38,7 +41,8 @@ const index = () => {
         <View style={tw`flex flex-row justify-between flex-wrap gap-8 `}>
           {productData.map((item) => {
             return (
-              <View key={item.id} style={tw`flex flex-col gap-1`}>
+              <Pressable key={item.id} onPress={() => router.push(`/food/${item.id}`)} >
+              <View style={tw`flex flex-col gap-1`} >
                 <Image source={item.image} style={[{height: hp(16), width: hp(16)}, tw`rounded-md`]} />
                 <Text
                   style={tw`p-2 bg-amber-500 text-white text-[16px] rounded-md absolute right-[${wp(1)}] top-2`}
@@ -53,6 +57,7 @@ const index = () => {
                   {item.nationality} | $ {item.price}
                 </Text>
               </View>
+              </Pressable>
             );
           })}
         </View>
