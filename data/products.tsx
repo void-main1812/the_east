@@ -19,7 +19,7 @@ const productData = [
     price: 17.99,
     nationality: "Chinese",
     description:
-      " A dish of stir-fried noodles, with shredded chicken or beef and a variety of vegetables including onions, carrots, cabbage, bean sprouts, celery, and bell peppers, served over thin rice noodles. ",
+      "A dish of stir-fried noodles, with shredded chicken or beef and a variety of vegetables including onions, carrots, cabbage, bean sprouts, celery, and bell peppers, served over thin rice noodles. ",
     image: fried_noodles,
     rating: 4.6,
     id: 2,
@@ -29,7 +29,7 @@ const productData = [
     price: 14.25,
     nationality: "Japanese",
     description:
-      " A dish of prepared vinegared rice, usually with some sugar and salt, accompanying a variety of ingredients, such as seafood, often raw, and vegetables. Styles of sushi and its presentation vary widely, but the one key ingredient is 'sushi rice', also referred to as shari, or sumeshi.",
+      "A dish of prepared vinegared rice, usually with some sugar and salt, accompanying a variety of ingredients, such as seafood, often raw, and vegetables. Styles of sushi and its presentation vary widely, but the one key ingredient is 'sushi rice', also referred to as shari, or sumeshi.",
     image: sushi,
     rating: 4.0,
     id: 3,
@@ -39,7 +39,7 @@ const productData = [
     price: 16.55,
     nationality: "Japanese",
     description:
-      " A dish of cooked rice that has been stir-fried in a wok or a frying pan and is usually mixed with other ingredients such as eggs, vegetables, seafood, or meat. It is often eaten by itself or as an accompaniment to another dish. ",
+      "A dish of cooked rice that has been stir-fried in a wok or a frying pan and is usually mixed with other ingredients such as eggs, vegetables, seafood, or meat. It is often eaten by itself or as an accompaniment to another dish. ",
     image: fried_rice,
     rating: 4.8,
     id: 4,

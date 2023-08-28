@@ -21,7 +21,7 @@ export const Input: FC<InputProps> = ({
   style,
 }) => {
   return (
-    <View style={tw`w-full ${style}`}>
+    <View style={tw`w-[100%] ${style}`}>
       <TextInput
         placeholder={placeholder}
         onChangeText={onChangeText}

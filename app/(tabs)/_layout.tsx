@@ -19,7 +19,7 @@ export default () => {
       {/* Home Screen */}
 
       <Tabs.Screen
-        name="main/home/index"
+        name="home/index"
         options={{
           tabBarLabel(props) {
             return <Label label="Home" props={props} />;
@@ -30,7 +30,7 @@ export default () => {
         }}
       />
       <Tabs.Screen
-        name="main/account/index"
+        name="account/index"
         options={{
           tabBarLabel(props) {
             return <Label label="Account" props={props} />;
@@ -41,7 +41,7 @@ export default () => {
         }}
       />
       <Tabs.Screen
-        name="main/wishlist/index"
+        name="wishlist/index"
         options={{
           tabBarLabel(props) {
             return <Label label="Wishlist" props={props} />;
@@ -52,7 +52,7 @@ export default () => {
         }}
       />
       <Tabs.Screen
-        name="main/cart/index"
+        name="cart/index"
         options={{
           tabBarLabel(props) {
             return <Label label="Cart" props={props} />;

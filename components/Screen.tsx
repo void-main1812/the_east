@@ -25,11 +25,16 @@ export const Label: FC<ScreenProps> = ({ label, props }) => {
 
 export const Icon: FC<ScreenProps> = ({ icon, props }) => {
   return (
-    <Ionicons
-      name={icon}
-      size={24}
-      color={props.focused ? "#f59e0b" : "#b8b8b8"}
-      style={tw`${props.focused ? "bg-amber-50 rounded-lg p-2" : ""}`}
-    />
+    <View
+      style={tw`h-[40px] w-[40px] flex justify-center items-center ${
+        props.focused ? "bg-amber-50 rounded-lg" : ""
+      }`}
+    >
+      <Ionicons
+        name={icon}
+        size={24}
+        color={props.focused ? "#f59e0b" : "#b8b8b8"}
+      />
+    </View>
   );
 };

@@ -10,7 +10,7 @@ export default function TabOneScreen() {
 
   useEffect(() => {
     setTimeout(() => {
-      router.push("/main/home");
+      router.push("/home");
     }, 2000);
   }, []);
 
