@@ -8,8 +8,10 @@ import { Ionicons } from "expo-vector-icons";
 import productData from "../../../../data/products";
 import { ScrollView } from "react-native-gesture-handler";
 import { DiscountBanner } from "../../../../components/DiscountBanner";
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const index = () => {
+
   return (
     <ScrollView style={tw`bg-white`}>
       <View style={tw`h-full w-full flex flex-col gap-[40px] p-8 items-center`}>
@@ -36,18 +38,18 @@ const index = () => {
         <View style={tw`flex flex-row justify-between flex-wrap gap-8 `}>
           {productData.map((item) => {
             return (
-              <View style={tw`flex flex-col gap-1`}>
-                <Image source={item.image} style={tw`h-48 w-48 rounded-md`} />
+              <View key={item.id} style={tw`flex flex-col gap-1`}>
+                <Image source={item.image} style={[{height: hp(16), width: hp(16)}, tw`rounded-md`]} />
                 <Text
-                  style={tw`p-2 bg-amber-500 text-white text-[16px] rounded-md absolute right-2 top-2`}
+                  style={tw`p-2 bg-amber-500 text-white text-[16px] rounded-md absolute right-[${wp(1)}] top-2`}
                 >
                   <Ionicons name="ios-star" color="white" size={16} />{" "}
                   {item.rating}
                 </Text>
-                <Text style={tw`text-3xl font-black text-zinc-900`}>
+                <Text style={tw`text-2xl font-black text-zinc-900`}>
                   {item.name}
                 </Text>
-                <Text style={tw`text-lg text-zinc-500`}>
+                <Text style={tw`text-base text-zinc-500`}>
                   {item.nationality} | $ {item.price}
                 </Text>
               </View>
